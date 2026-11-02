@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Environment variables
 .env
 
@@ -5,10 +6,30 @@
 .venv/
 venv/
 
+=======
+
+# Python virtual environment
+.venv/
+venv/
+
+# Environment variables and passwords
+.env
+
+>>>>>>> origin/main
 # Python cache
 __pycache__/
 *.pyc
 
+<<<<<<< HEAD
 # Editor settings
 .vscode/
 .idea/
+=======
+# Editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+>>>>>>> origin/main
