@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Patient Reviews | Medicare</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <header>
+            <h1> Patient Reviews and Feedback</h1>
+            <p> Share your experience with Medicare</p>
+            <a href="/"> Home</a>
+
+        </header>
+    <main>
+        <h2>
+            Submit your Review
+        </h2>
+
+        <form action="/reviews" method="post">
+
+            <label for ="patient_name">Patient Name</label>
+            <input
+            type="text"
+            id="patient_name"
+            name="patient_name"
+            placeholder="Enter your name"
+            required >
+            <label for="feedback"> Your Feedback</label>
+            <textarea
+            id="feedback"
+            name="feedback"
+            rows="5"
+            placeholder="Write Your Experience here..."
+
+            required
+            ></textarea>
+
+            <label for="rating"> Rate your Experience(1-5) </label>
+            <select id="rating" name="rating" required>
+                <option value="">Select Rating</option>
+                <option value="1"> 1 - Poor</option>
+                <option value="2"> 2 - Fair</option>
+                <option value="3"> 3 - Good</option>
+                <option value="4"> 4 - Very Good</option>
+                <option value="5"> 5 - Excellent</option>
+            </select>
+
+            <button type="Submit">Submit your review</button>
+
+        </form>
+
+    </main>
+</body>
+</html>

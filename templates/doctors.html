@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors | MediCare</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Our Doctors</h1>
+        <p>Meet our qualified healthcare professionals</p>
+        <a href="/">Home</a>
+    </header>
+
+    <main>
+        <section class="doctors-section">
+            <h2>Our Medical Team</h2>
+
+            <div class="doctor-container">
+                {% for doctor in doctors %}
+                <div class="doctor-card">
+
+                    <h3>{{ doctor.name }}</h3>
+
+                    <p>
+                        <strong>Degree:</strong>
+                        {{ doctor.degree }}
+                    </p>
+
+                    <p>
+                        <strong>Education:</strong>
+                        {{ doctor.education or "Not specified" }}
+                    </p>
+
+                    <p>
+                        <strong>Specialisation:</strong>
+                        {{ doctor.specialisation }}
+                    </p>
+
+                    <p>
+                        <strong>Experience:</strong>
+                        {{ doctor.experience_years }} years
+                    </p>
+
+                </div>
+                {% else %}
+                <p>No doctors are currently available.</p>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MediCare Management System</p>
+    </footer>
+
+</body>
+</html>

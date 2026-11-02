@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+    <head>
+           <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | MediCare</title>
+    <link rel="stylesheet" href="/static/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                Book an Appointment
+            </h1>
+            <p>Schedule a visit  with one of our doctors</p>
+            <a href="/">Home</a>
+        </header>
+
+        <main>
+            <section class="/Appointments-section">
+                <h2>
+                    Patient Details
+                </h2>
+                <form action="/appointments" method="post">
+                    <label for ="patient_name">Patient name </label>
+                    <input type="text"
+                    id="patient_name"
+                    name="patient_name"
+                    required
+                    >
+                    <label for="age"> Age</label>
+                    <input
+                    type = "number"
+                    id="age"
+                    name="age"
+                    min="1"
+                    max="120"
+                    required 
+                    >
+
+                    <label for ="health_issue">Health Issue / Symptoms</label>
+                    <textarea
+                    id="health_issue"
+                    name="health_issue"
+                    rows="4"
+                    required>
+                </textarea>
+
+                <label for="doctor_id"> Select Doctor</label>
+                <select id="doctor_id" name="doctor_id" required>
+                    <option value="">Choose a doctor</option>
+                    {% for doctor in doctors %}
+                    <option value="{{doctor.doctor_id}}">
+                        {{doctor.name}} - {{doctor.specialisation }}
+                    </option>
+                    {% endfor %}
+                </select>
+
+                <label for="appointment_date"> Appointment Date</label>
+                <input
+                type="date"
+                id="appointment_date"
+                name="appointment_date"
+                required >
+
+                <label for="appointment_time"> Appointment Time</label>
+                <input 
+                type="time"
+                id="appointment_time"
+                name="appointment_time"
+                required
+                >
+
+                <button type="submit"> Book Appointment</button>
+
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p> &copy; 2026 Medicare Management System</p>
+        </footer>
+    </body>
+</html>

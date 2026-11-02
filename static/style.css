@@ -1,0 +1,331 @@
+
+/* =================================
+   GLOBAL STYLING
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =================================
+   HEADER
+================================= */
+
+header {
+    background-color: #176B87;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+header a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 8px 18px;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+
+header a:hover {
+    background-color: white;
+    color: #176B87;
+}
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+main h2 {
+    color: #176B87;
+    margin-bottom: 20px;
+}
+
+/* =================================
+   HOMEPAGE DASHBOARD
+================================= */
+
+.dashboard {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.dashboard h2 {
+    font-size: 30px;
+    color: #176B87;
+    margin-bottom: 10px;
+}
+
+.dashboard > p {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.dashboard-card {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card h3 {
+    color: #176B87;
+    margin-bottom: 12px;
+}
+
+.dashboard-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.dashboard-card a {
+    display: inline-block;
+    background-color: #176B87;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.dashboard-card a:hover {
+    background-color: #104D63;
+}
+
+/* =================================
+   FORMS
+================================= */
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #176B87;
+    box-shadow: 0 0 4px rgba(23, 107, 135, 0.3);
+}
+
+/* =================================
+   BUTTONS
+================================= */
+
+button {
+    background-color: #176B87;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    margin-top: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #104D63;
+}
+
+/* =================================
+   DOCTOR CARDS
+================================= */
+
+.doctor-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.doctor-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+.doctor-card h3 {
+    color: #176B87;
+    margin-bottom: 10px;
+}
+
+/* =================================
+   APPOINTMENT TABLE
+================================= */
+
+.appointment-table-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+th {
+    background-color: #176B87;
+    color: white;
+    padding: 13px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f1f7fa;
+}
+
+td form {
+    display: inline-block;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 3px;
+}
+
+td button {
+    margin: 3px;
+    padding: 8px 12px;
+}
+
+/* Confirm button */
+td form[action*="confirm"] button {
+    background-color: #218838;
+}
+
+td form[action*="confirm"] button:hover {
+    background-color: #17692b;
+}
+
+/* Cancel button */
+td form[action*="cancel"] button {
+    background-color: #dc3545;
+}
+
+td form[action*="cancel"] button:hover {
+    background-color: #b52a37;
+}
+
+/* Delete button */
+td form[action*="delete"] button {
+    background-color: #b02a37;
+}
+
+td form[action*="delete"] button:hover {
+    background-color: #842029;
+}
+
+/* =================================
+   REVIEW PAGE
+================================= */
+
+.review-container {
+    max-width: 650px;
+    margin: 35px auto;
+}
+
+.review-container form {
+    padding: 30px;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .dashboard-container,
+    .doctor-container {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .dashboard-card {
+        padding: 22px 15px;
+    }
+
+    form {
+        padding: 18px;
+    }
+}
